@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+.button{
+	text-align: right;
+	border-bottom: none;
+	width:90%;
+	padding:0 5px;
+	margin:0 auto 0 30px;
+}
+.main{
+	width:90%;
+    border-collapse: collapse;
+	text-align:center;
+	margin:0 auto 0 30px;
+}
+.main th, td {
+    border-bottom: 1px solid gray;
+    padding: 10px;
+}
+.main caption {
+    border-bottom: 1px solid gray;
+    padding: 0 0 30px;
+    font-size:2rem;
+}
+th{
+	background:#eff2f5;
+}
+.pageNo{
+	text-align: center;
+	border-bottom: none;
+	padding:20px 10px;
+}
+hr{
+	border: 0;
+	background:#5e6b9e;
+	height:1px;
+	margin-bottom:20px;
+}

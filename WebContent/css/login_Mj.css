@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+/*박스의 크기를 어떤 것을 기준으로 계산할지 지정
+   기본값 : content-box(컨텐트 영역을 기준) */
+* {box-sizing: border-box; /*테두리를 기준*/}
+
+
+
+/*  selector1, selector2, ...   여러 선택자에 공통css서식적용
+    .클래스명
+    .form-container   클래스명이 form-container인 요소
+    input[type=text]  type속성의 값이 text인 input요소
+    
+    selector1>selector2   부모>자식
+    
+    selector1 selector2   조상 후손
+    .form-container input[type=text]
+       클래스명이 form-container인 요소의  후손중에서
+    type속성의 값이 text인 input요소   
+    */
+    
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+    
+.form-container input[type=text], 
+.form-container input[type=password] {
+  width: 100%;
+  padding: 15px;				/*border안쪽여백 : 모두15px*/
+  margin: 5px 0 22px 0; /*border밖  여백 : 위5 오른쪽0 아래22 왼쪽0*/
+  border: none;
+  background: #f1f1f1;
+}
+
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;				/*투명도 0(투명)~1(불투명)*/
+}
+	
+	.form-container .cancel {
+	  background-color: red;
+	}
+
+/*클래스명이 form-container인 요소의  후손중에서
+   클래스명이  btn인 요소에 마우스가 올라가면(hover)
+  불투명해져라
+*/
+.form-container .btn:hover{
+  opacity: 1;
+}
+
+

@@ -1,0 +1,235 @@
+@charset "UTF-8";
+/*----------------html--------------------------------*/
+* {
+    box-sizing:border-box;
+     font-size:15px;
+     font-weight:500;
+}
+
+/*-----------------body------------------------------*/
+ul{
+	list-style:none;
+}
+body{
+    font-size:1.5rem;
+}
+li{
+    font-size:0.5rem;
+}
+div{
+    display:block;
+    overflow:hidden;
+}
+a{
+    color:black;
+    text-decoration:none;
+}
+.rab{
+    overflow: hidden;
+    min-width: 1190px;
+}
+.container{
+    position: relative;
+    width: 1130px;
+    margin: 0 auto;
+}
+.maincontainer{
+    position: relative;
+    width: 1200px;
+    margin: 0 auto 80px;
+    padding:20px auto;
+}
+/*----------------------------header--------------------*/
+
+ .logo{
+    color:blue;
+    position:relative;
+    top:-23px;
+    font-weight:900;
+    padding:0px 0px 0px 0px;
+    font-size:4rem;
+    display:inline-block;  
+    cursor:pointer;
+}
+ .logo1{
+ 	width:250px;
+ 	margin:0 0 0 30px;
+}
+.find{
+	display:inline-block;
+	margin: auto 0 auto 100px;
+	position : absolute;
+	left:20%;
+	top: 20%;
+	width:500px;
+	height:48px;
+	border:1px solid #5e6b9e;
+}
+input.findbutton{
+	display:inline-block;
+	margin: auto 0 auto 100px;
+	position : absolute;
+	left:60%;
+	top: 20%;
+	background:url("../icon/find.png");
+	width:47px;
+	height:47px;
+	border: none;
+}
+/*----------------------------nav-----------------------*/
+.topmenurab{
+	margin:10px 0;
+    text-align: right;
+}
+.topmenu{
+    overflow: hidden;
+    position: relative;
+    height:30px;   
+    border-radius:4px;
+
+}
+.menurab{
+    background:#5e6b9e;
+	
+}
+.secmenu{
+    overflow: hidden;
+    position: relative;
+    height:55px;
+    border:1px solid #5e6b9e;
+    background:#5e6b9e;
+    border-radius:4px;
+	
+}
+.menu{
+	display:inline-block;
+	background:#5e6b9e;
+	position:relative;
+}
+.menutext{
+	display:inline-block;
+	color:white;
+	background:#5e6b9e;
+	font-size:1.2rem;   
+    height:12px;
+    margin:0 20px 0 0;
+    cursor:pointer;
+}
+.menutext:hover {
+    color:#ff4d4d;
+    font-weight:900;
+}
+.menutop{
+	display:inline-block;
+	position:relative;
+    top:-13px;
+
+}
+.menutexttop{
+	display:inline-block;
+	font-size:1.2rem;
+    height:12px;
+    padding: 5px 5px 22px 5px;
+    margin:0 0 0 15px;
+    cursor:pointer;
+}
+.menutexttop:hover {
+    color:white;
+    font-weight:900;
+    background:#5e6b9e;
+    padding: 5px 5px 22px 5px;
+    border-radius:20px;
+    border:1px solid #5e6b9e;
+    opacity: 0.7;	
+}
+
+/*-----------------main-----------------------------*/
+.sidepmenurab{
+	
+	float:left;
+	width:15%;
+}
+.sidepmenu{
+
+	float:left;
+	width:15%;
+	border:0px;
+	
+}
+.sidemenutext{
+	display:inline-block;
+	margin : 5px 0;
+	font-size:1.1rem;
+	cursor:pointer;
+	color:#5e6b9e;
+	
+}
+.mypage{
+    float:left;
+    width:84%;
+    border-left:1px solid #5e6b9e;
+  	padding-left:20px;
+}
+.photo{
+	width:100%;
+	height:auto;
+	margin:5px;
+}
+
+.main:after{
+    content:'';
+    position:relative;
+    display:block;
+    clear:both;
+   }
+
+ /*--------------------footer--------------------------------*/
+.foot{
+	display:inline-block;
+    font-size:1.2rem;
+    text-align: center;
+    padding:0px 10px 0px 0px;
+    margin:0px;
+}
+.foottext{
+    font-size:1.2rem;
+    font-weight:400;
+    color:#ffffff;
+}
+.footcontainer{
+	height:auto;
+	background:#ebebe0;
+}
+.footmenu{
+	height:55px;
+	background:#5e6b9e;
+	width:100%;
+	text-align: center;
+	z-index:999;
+}
+.footlogo{
+	width:100px;	
+	margin-top:5px;
+	margin-bottom:10px;
+}
+.logo2{
+	width:90px;
+}
+.footleft{
+	float:left;
+	opacity: 0.7;
+}
+.footright{
+	float:right;
+	opacity: 0.7;
+}
+.footdiv:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.footdiv{
+    width: 950px;
+	margin: 0 auto;
+	padding: 10px 30px 30px;
+}

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+	
+	<display-name>JDKBOOK</display-name>	
+	<!--파일업로드  -->
+	<servlet>
+        <servlet-name>Upload_MemberImage_Mj</servlet-name>
+        <servlet-class>upload.Upload_MemberImage_Mj</servlet-class>
+        <multipart-config>
+           <!--  <location>d:\test</location> --><!-- 학원용결로 -->
+            <location>e:\test</location><!--서버용경로  -->
+            <max-file-size>-1</max-file-size>
+            <max-request-size>-1</max-request-size>
+            <file-size-threshold>1024</file-size-threshold>
+        </multipart-config>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>Upload_MemberImage_Mj</servlet-name>
+        <url-pattern>/upload</url-pattern>
+    </servlet-mapping>
+	
+    <!-- 어드민 로그인 체크필터 -->
+	<filter>
+		<filter-name>AdmLoginCheckFilter</filter-name>
+		<filter-class>board.common.filter.AdmLoginCheckFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>AdmLoginCheckFilter</filter-name>
+		<url-pattern>/admin/staff.book</url-pattern>
+		<url-pattern>/admin/staffdetail.book</url-pattern>
+		<url-pattern>/admin/staffmodify.book</url-pattern>
+		<url-pattern>/admin/staffdelete.book</url-pattern>
+		<url-pattern>/admin/member.book</url-pattern>
+		<url-pattern>/admin/memberdetail.book</url-pattern>
+		<url-pattern>/admin/membermodify.book</url-pattern>
+		<url-pattern>/admin/memberdelete.book</url-pattern>
+		<url-pattern>/admin/sales.book</url-pattern>
+		<url-pattern>/admin/salescancel.book</url-pattern>
+		<url-pattern>/admin/salesfix.book</url-pattern>
+		<url-pattern>/admin/boardWrite.book</url-pattern>
+		<url-pattern>/admin/boardmodify.book</url-pattern>
+		<url-pattern>/admin/boarddelete.book</url-pattern>
+		<url-pattern>/product/selectAllMaster.book</url-pattern>
+      	<url-pattern>/product/insertMaster.book</url-pattern>
+      	<url-pattern>/product/selectOne.book</url-pattern>
+      	<url-pattern>/product/delete.book</url-pattern>      
+      	<url-pattern>/board/qnamodify.book</url-pattern>
+      	<url-pattern>/board/qnadelete.book</url-pattern>      	
+	</filter-mapping>
+	<!-- 회원 로그인 체크필터 -->
+ 	<filter>
+		<filter-name>LoginCheckFilter</filter-name>
+		<filter-class>board.common.filter.LoginCheckFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>LoginCheckFilter</filter-name>
+		<url-pattern>/member/changepwd.book</url-pattern>
+		<url-pattern>/member/mypage.book</url-pattern>
+		<url-pattern>/member/delete.book</url-pattern>
+		<url-pattern>/member/memberOrder.book</url-pattern>
+		<url-pattern>/board/freeboardwrite.book</url-pattern>
+		<url-pattern>/board/modify.book</url-pattern>
+		<url-pattern>/board/delete.book</url-pattern>
+		<url-pattern>/review/writer.book</url-pattern>
+		
+	</filter-mapping>
+	<!-- 회원 어드민 로그인 체크필터 -->
+	<filter>
+		<filter-name>AdminUserLoginCheckFilter</filter-name>
+		<filter-class>board.common.filter.AdminUserLoginCheckFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>AdminUserLoginCheckFilter</filter-name>
+		<url-pattern>/review/update.book</url-pattern>
+		<url-pattern>/review/delete.book</url-pattern>
+	</filter-mapping>
+	
+	<!-- properties 파일설정 -->
+ 	<servlet>
+		<servlet-name>commandHandlerURI_Mj</servlet-name>
+		<servlet-class>mvc.controller.ControllerUsingURI_Mj</servlet-class>
+		<init-param>
+					<param-name>configFile</param-name>
+					<param-value>/WEB-INF/commandHandlerURI_Mj.properties</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+	<!-- p542 20~23라인   web browser의 url이  .book로 끝나는 요청처리 -->
+	<servlet-mapping>
+		<servlet-name>commandHandlerURI_Mj</servlet-name>
+		<url-pattern>*.book</url-pattern>
+	</servlet-mapping>
+	<!-- 컨넥션 풀 설정 -->
+	 <listener>
+		<listener-class>jdbc.DBCPInitListener_Mj</listener-class>
+	</listener>
+	
+	<context-param>
+		<param-name>poolConfig</param-name>
+		<param-value>
+			jdbcdriver=oracle.jdbc.driver.OracleDriver
+			<!-- jdbcUrl=jdbc:oracle:thin:@localhost:1521:xe --> 
+			jdbcUrl=jdbc:oracle:thin:@jbkbook.iptime.org:1521:xe 
+			dbUser=jbk
+			dbPass=jbk
+			validationQuery=select 1 from dual
+			minIdle=3
+			maxTotal=30
+			poolName=jsptest
+		</param-value>
+	</context-param>
+  
+</web-app>

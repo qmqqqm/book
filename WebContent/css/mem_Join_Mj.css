@@ -1,0 +1,52 @@
+@charset "UTF-8";
+table,td,th,input,textarea {
+	border:1px solid gray;
+	border-collapse: collapse;
+	font-size:1.2rem;
+	padding:10px;
+}
+
+td.mem{
+	text-align: center
+}
+
+.mini,textarea {
+	color:gray;font-size:1.2rem;
+}
+.agr{
+    position: relative;
+    top: 3px;
+    left:10px;
+    font-size : 1.5rem;
+}
+input[type=checkbox]{
+	transform : scale(2.0);
+}  
+.intext{
+	width : 400px;
+}  
+
+table{
+	width:60%; 
+	margin:0 auto;
+}
+.index{
+	width:150px;
+	height:30px;
+}
+textarea{
+	width:900px;
+	background:#5e6b9e;
+	color:white;
+}
+.joinButton{
+	margin:0 10px;
+}
+hr{
+	border: 0;
+	background:#5e6b9e;
+	height:1px;
+	margin-bottom:20px;
+}
+		
+		

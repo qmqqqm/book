@@ -1,0 +1,25 @@
+@charset "UTF-8";
+.image{
+	width:auto;
+	height:270px;
+	border:1px solid gray;
+
+}
+#preview{
+	width:200px;
+	height:100%;
+	
+}
+.imagerab{
+	width:200px;
+	float:left;
+	margin:0 20px;
+}
+.formrab{
+	width:400px;
+	float:left;
+}
+.tablerab{
+	width:400px;
+	float:left;
+}

@@ -1,0 +1,93 @@
+@charset "UTF-8";
+table{
+	width: 80%;	
+}
+.prolist{
+	margin 10px 0;
+}
+
+.main{
+	width: 80%;
+    border-collapse: collapse;
+	text-align:center;
+}
+.main th, td {
+    border-bottom: 1px solid gray;
+   
+}
+.main caption {
+    border-bottom: 1px solid gray;
+    padding: 0 0 30px;
+    font-size:2rem;
+}
+th{
+	background:#eff2f5;
+	height:40px;
+}
+.pageNo{
+	text-align: center;
+	border-bottom: none;
+	padding:20px 10px;
+}
+hr{
+	border: 1px ;
+	background:#5e6b9e;
+	height:1px;
+	margin-bottom:20px;
+}
+.bottom{
+	text-align: center;
+	border-bottom: none;
+	padding:20px 10px;
+}
+.text{
+	border:none;
+	resize:none;
+	width:100%;
+}
+.content{
+	background:#eff2f5;
+	text-align: center;
+	border-bottom: none;
+}
+.count{
+	border-bottom: none;
+}
+.bottomMenu{
+	border: 1px solid gray;
+	padding: 5px 10px;
+	margig: 0 10px;
+	border-radius:7px;
+	background:#eff2f5;
+}
+
+.index{
+	width:300px;
+	border:none;
+	text-align: left;
+}
+.image{
+	border-bottom: none;
+	padding:10px 10px;
+	text-align: center;
+	width:300px;
+	height:auto;
+}
+.imgrab{
+	width:300px;
+	padding:0;
+	margin:0;
+}
+.price{
+	border:none;
+}
+.title{
+	font-size:1.5rem;
+	font-weight:900;
+	color:#5e6b9e;
+}
+
+img{
+	width:100%;
+	height:auto;
+}

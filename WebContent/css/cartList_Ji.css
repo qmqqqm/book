@@ -1,0 +1,50 @@
+@charset "UTF-8";
+.cart{
+    border-collapse: collapse;
+    width:100%;
+    text-align:center;
+}
+h2{
+	font-size:2rem;
+}
+.lastTd{
+	text-align:right;
+	border-bottom:none;
+}
+th{
+	background:#eff2f5;
+}
+th, td{
+	border-top:1px solid gray;
+    border-bottom:1px solid gray;
+    padding:10px;
+    font-size:1.2rem;
+}
+button{
+	border:1px solid gray;
+	border-radius:10px;
+	background:#eff2f5;
+	height:30px;
+	margin:5px;
+}
+hr{
+	border: 0;
+	background:#5e6b9e;
+	height:1px;
+	margin-bottom:20px;
+}
+span{
+	font-size:1.8rem;
+	background:white;
+	color:#5e6b9e;
+	font-weight:bold;
+	text-align:right;
+}
+input[name="total"]{
+	border:0;
+	font-size:2rem;
+	background:white;
+	color:#5e6b9e;
+	font-weight:bold;
+	text-align:right;
+}
